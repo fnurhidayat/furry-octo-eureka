@@ -1,5 +1,5 @@
 var create = require('./create.js');
-
+var getUser = require('./read.js')
 var args = process.argv.slice(2);
 var method = args[0];
 
@@ -20,6 +20,8 @@ switch(method) {
     break;
     
   case 'get_user':
+    let key = args[1]
+    getUser(key);
     break;
 
   default:
